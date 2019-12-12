@@ -1,0 +1,52 @@
+<!-- 繼承login -->
+{%extends 'login.html'%}
+
+<!-- 必加 -->
+{%load static%}
+<!-- 要給register.css -->
+{%block style%}
+<link rel="stylesheet" href="{%static 'css/register.css'%}"> {%endblock%}
+
+
+<!-- 上方顯示修改為註冊會員 -->
+{%block title%}註冊會員 {%endblock%}
+
+<!-- 修改連結名稱 -->
+{%block btn%}
+<a href="{%url 'login'%}">會員登錄</a> {%endblock%}
+
+<!-- 修改為註冊會員的欄位 -->
+{%block form%}
+<form action="/register/" method="post">
+{%csrf_token%}
+    <div class="form-line">
+        <p>用戶名稱</p>
+        <div>
+            <input type='text' name='uname' class='for-control'>
+        </div>
+        <p>手機號碼/身分證</p>
+        <div>
+            <input type='text' name="uphone" maxlength="10" placeholder="手機/身分字號(二擇一)" class="for-control">
+            <p id="uphone_err">
+                {{errMsg}}
+            </p>
+        </div>
+        <p>密碼</p>
+        <div>
+            <input type="password" name='upwd' id='upwd' maxlength="15" placeholder="請輸入6-15碼英數混合密碼" class="for-control">
+        </div>
+        <p>確認密碼</p>
+        <div>
+            <input type="password" id='upwd' name='upwd'maxlength="15" placeholder="" class="for-control">
+        </div>
+        <p>電子郵件</p>
+        <div>
+            <input type="text" id='uemail' name='uemail' placeholder="請輸入信箱" class="for-control">
+        </div>
+        <div>
+            <input type="submit" value="註冊" class="btnLogin">
+        </div>
+
+    </div>
+</form>
+{%endblock%}

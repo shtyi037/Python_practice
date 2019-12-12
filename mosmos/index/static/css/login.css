@@ -1,0 +1,172 @@
+#container {
+    box-sizing: border-box;
+    border: 1px solid black;
+    width: 593px;
+    margin: 32px auto;
+    overflow: hidden;
+}
+
+
+/* 左上方會員登錄 */
+
+#title {
+    font-size: 25px;
+    margin: 0px auto;
+    padding: 0px;
+    color: #0f0606;
+    font-weight: normal;
+    border-bottom: 1px solid #dad0d0;
+}
+
+
+/* 右上方關閉按鈕 */
+
+#close {
+    /*文字靠右,文字大小,外右邊距,上邊距*/
+    text-align: right;
+    font-size: 2px;
+    margin-right: 12px;
+    margin-top: 14px;
+}
+
+
+/* 左方 登入 form */
+
+#login {
+    float: left;
+    margin-top: 14px;
+    margin-left: 33px;
+}
+
+#login .form-line {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+#mosLogo {
+    /*box-sizing,寬度,高度,取消邊框，取消輪廓，背景顏色,文字顏色，文字大小,邊框倒角*/
+    box-sizing: border-box;
+    width: 290px;
+    height: 33px;
+    border: none;
+    outline: none;
+    background-color: black;
+    color: #fff;
+    font-size: 24px;
+    border-radius: 5px;
+}
+
+
+/* 輸入的帳號及密碼框 */
+
+#login .for-control {
+    /*box-sizing,寬度,高度,邊框,左內邊框距離,上外邊距,邊框倒角*/
+    box-sizing: border-box;
+    width: 290px;
+    height: 33px;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+
+
+/* 帳號下方顯示Error文字 */
+
+#uphone_err {
+    /*文字顏色,文字大小,上邊距*/
+    color: rgba(104, 104, 104);
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+
+/* 密碼下方的文字 */
+
+#d1 {
+    color: rgba(104, 104, 104);
+    font-size: 2px;
+}
+
+
+/*驗證碼的框*/
+
+#login .verification {
+    box-sizing: border-box;
+    width: 192px;
+    height: 36px;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+    border-radius: 5px;
+    /*邊框倒角*/
+}
+
+
+/*記住帳號*/
+
+#login .isSave {
+    width: 12px;
+    height: 12px;
+    vertical-align: middle;
+    font-size: 2px;
+}
+
+
+/*登入*/
+
+#login .btnLogin {
+    /*box-sizing,寬度,高度,取消邊框,取消輪廓,背景顏色,文字顏色,文字大小,邊框倒角,上外邊距,鼠標變小手*/
+    box-sizing: border-box;
+    width: 290px;
+    height: 33px;
+    border: none;
+    outline: none;
+    background-color: rgba(231, 34, 144);
+    color: #fff;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-top: 17px;
+    cursor: pointer;
+}
+
+
+/*免費註冊 & 忘記密碼 */
+
+#login .hr_botton {
+    float: right;
+    font-size: 2px
+}
+
+
+/*右方連結*/
+
+#hr {
+    float: left;
+    margin-top: 14px;
+    margin-left: 33px;
+}
+
+#hr .form-line {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+
+/*右方超連結的所有格子*/
+
+#hr .form-line .URL {
+    /* 下邊距 */
+    margin-bottom: 17px;
+}
+
+
+/*右方超連結的所有格子內的圖片*/
+
+#hr .form-line .URL>img {
+    /*box-sizing,寬度,高度,邊框倒角,鼠標變小*/
+    box-sizing: border-box;
+    width: 180px;
+    height: 45px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    cursor: pointer;
+}

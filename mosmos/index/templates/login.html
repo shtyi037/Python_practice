@@ -1,0 +1,91 @@
+{%load static%}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MosMos_shopping</title>
+    <link rel="stylesheet" href="{%static 'css/login.css'%}">
+    <script src="{%static 'js/jquery-1.11.3.js'%}"></script>
+    <script src="{%static 'js/login.js'%}"></script>
+    {%block style%}{%endblock%}
+</head>
+
+<body>
+    <div id="container">
+        <div id="close">
+            <!-- 上方:關閉按鈕 -->
+            <a href="javascript:window.close();">關閉</a>
+        </div>
+        <!-- 上方:會員登錄 -->
+        <h2 id="title" align="center">{%block title%}會員登錄{%endblock%}</h2>
+        <!-- 左方:登入,密碼,註冊 -->
+        <div id="login">
+            {%block form%}
+            <!-- mosLogo -->
+            <div class="form-line">
+                <img id="mosLogo" src="{%static 'images/mos.jpg'%}">
+            </div>
+            <form action="/login/" method="post">
+                {%csrf_token%}
+                <!-- 手機或身分證號 -->
+                <!-- <div class="form-line"> -->
+                <div>
+                    <input type='text' id="uphone" name="uphone" maxlength="10" value="{{u.uphone}}" placeholder="手機/身分字號(二擇一)" class="for-control">
+                </div>
+                <p id="uphone_err">
+                    <!-- 有錯誤則顯示 -->
+                    {{errMsg}}
+                </p>
+                <!-- </div> -->
+                <!-- 第二行:密碼 -->
+                <div class="form-line">
+                    <div>
+                        <input type="password" id='upwd' name="upwd" maxlength="15" placeholder="請輸入6-15碼英數混合密碼" class="for-control">
+                    </div>
+                    <div id="d1">
+                        <!-- 英文字母大小寫 -->
+                        英文字母需區分大小寫
+                    </div>
+                </div>
+                <!-- 驗證碼 -->
+                <div class="form-line">
+                    <div>
+                        <!-- 記住我的帳號 -->
+                        <p></p>
+                        <input type="checkbox" name="isSave" class="isSave" id="isSave">
+                        <label for="isSave">記住我的帳號</label>
+                    </div>
+                </div>
+                <!-- 登入 -->
+                <div>
+                    <input type="submit" value="登入 Login" class="btnLogin">
+                </div>
+            </form>
+            {%endblock%}
+            <!-- 免費註冊 & 忘記密碼 -->
+
+            <div class="form-line">
+                <div class="hr_botton">
+                    <p></p>
+                    {%block btn%}
+                    <a href="{%url 'register'%}">免費註冊</a> {%endblock%}
+
+                    <a href="#">忘記密碼</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 右方:其他APP連結 -->
+        <div id="hr">
+            <div class="form-line">
+                <a>
+                    <img width="200" height="200" src="{%static 'images/shopping.png'%}">
+                </a>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

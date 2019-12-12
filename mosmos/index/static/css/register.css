@@ -1,0 +1,9 @@
+.form-control {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.form-control:focus {
+    border-color: #64A131;
+    box-shadow: 0 0 2px #64A131;
+}
