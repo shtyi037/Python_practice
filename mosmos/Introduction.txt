@@ -1,0 +1,7 @@
+1.HTML,CSS,python,MySQL
+2.註冊/登入功能
+  >> 註冊(register),為繼承登入(login)並修正
+  >> 註冊成功後,存入資料庫(MYSQL)
+  >> 登入的值與資料庫(MYSQL)做驗證
+3.與MYSQL連接,並使用models.py建立資料庫
+3.Cookies 及 session 儲存
