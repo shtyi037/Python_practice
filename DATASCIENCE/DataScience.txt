@@ -1,0 +1,6 @@
+參考筆記:numpy,波動率
+
+波動率 代碼：
+volatility.py
+weekdays.py
+summary.py
